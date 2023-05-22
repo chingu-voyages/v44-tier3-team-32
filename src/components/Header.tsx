@@ -50,7 +50,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <h1 className="logo">The Store</h1>
+      <h2 className="logo">The Store</h2>
       <div className="iconContainer">
         <i className="fa-regular fa-heart"></i>
         <i className="fa-solid fa-magnifying-glass"></i>
