@@ -21,6 +21,7 @@ header {
 }
 
 .menu-list {
+    width: 150px;
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -60,8 +61,14 @@ header {
     display: flex;
 }
 
+.logo {
+    margin: 0 auto;
+}
+
 .iconContainer {
+    width: 150px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 20px;
 }
