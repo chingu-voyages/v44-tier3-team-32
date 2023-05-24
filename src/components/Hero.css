@@ -1,0 +1,105 @@
+/* hero section */
+#hero{
+    width: 100%;
+    /* height: 150vh; */
+}
+#hero .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 481px) {
+    #hero .container {
+      max-width: 540px;
+   }
+  }
+  @media screen and (min-width: 769px) {
+    #hero .container {
+      max-width: 720px;
+   }
+  }
+  @media screen and (min-width: 981px) {
+    #hero .container {
+      max-width: 960px;
+   }
+  }
+  #hero .wm-hero {
+    width: 100%;
+    --duration1: 2.5s;
+    --duration2: calc(var(--duration1) / 2);
+    --delay1: calc(var(--duration2) / 2);
+    --delay2: calc(var(--duration2) + var(--delay1));
+    --easing: cubic-bezier(0.65, 0.05, 0.36, 1);
+    background-color: wheat;
+    overflow: hidden;
+    text-align: center;
+  }
+  #hero .wm-hero h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    opacity: 0;
+    transform: translateY(3em);
+    animation: loadH1 var(--duration1) var(--easing) var(--delay1) forwards;
+  }
+  @media screen and (min-width: 981px) {
+    #hero .wm-hero h1 {
+      font-size: 56px;
+   }
+  }
+  #hero .wm-hero img {
+    /* display: block; */
+    max-width: 100%;
+    /* margin: auto; */
+    height: auto;
+    border-radius: 1em 1em 0 0;
+    transform: translateY(100%);
+    animation: loadImg var(--duration2) var(--easing) var(--delay2) forwards;
+    margin: 15px;
+  }
+  @keyframes loadH1 {
+    0% {
+      opacity: 0;
+      transform: translateY(3em);
+   }
+    30%, 50% {
+      opacity: 1;
+      transform: translateY(3em);
+   }
+    100% {
+      opacity: 1;
+      transform: none;
+   }
+  }
+  @keyframes loadImg {
+    0% {
+      transform: translateY(100%);
+   }
+    100% {
+      transform: none;
+   }
+  }
+  #hero .hero-img{
+    display: flex;
+    justify-content:center;
+  }
+  #hero button {
+    padding: 0.9rem 1.2rem;
+    border-radius: 25px;
+    background-color: white;
+    border: 2px solid wheat;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1.5em auto ;
+}
+#hero button:hover{
+    background-color: wheat;
+    border: 2px solid black;
+}
+  
